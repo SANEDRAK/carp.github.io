@@ -3,7 +3,7 @@
   $msg = '';
   $msgClass = '';
 
-  if(filter_has_var(INPUT_POST, 'submit')) {
+  if(filter_has_var(INPUT_GET,INPUT_POST, 'submit')) {
   $name = $_POST['name'];
   $subject = $_POST['subject'];
   $email = $_POST['email'];
