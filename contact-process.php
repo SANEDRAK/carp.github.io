@@ -3,7 +3,7 @@
   $msg = '';
   $msgClass = '';
 
-  if(filter_has_var(INPUT_GET,INPUT_POST, 'submit')) {
+  if(filter_has_var(INPUT_POST, 'submit')) {
   $name = $_POST['name'];
   $subject = $_POST['subject'];
   $email = $_POST['email'];
@@ -13,7 +13,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
       $msg = 'Use a valid E-mail!';
     } else {
-      $toEmail = 'zinerguy@gmail.com';
+      $toEmail = 'zinferguy@gmail.com';
       $subject = 'You got a message From: '.$name;
       $body = '<h2>Conact Request</h2>
       <h4>Name: </h4><p>'.$name.'</p>
